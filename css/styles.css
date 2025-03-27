@@ -1,0 +1,324 @@
+/* General Styles */
+:root {
+    --primary-color: #d8c4bc;
+    --secondary-color: #8c7a70;
+    --accent-color: #a6836e;
+    --text-color: #333;
+    --light-color: #f9f4f0;
+    --dark-color: #4a4a4a;
+    --border-radius: 5px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    background-image: url('https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=1920');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+    color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 15px auto 0;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark-color);
+    position: relative;
+    z-index: 2;
+}
+
+.logo-background {
+    position: absolute;
+    font-size: 64px;
+    color: rgba(200, 180, 170, 0.2);
+    font-weight: 900;
+    letter-spacing: 5px;
+    z-index: 1;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.price-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.price-category {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.price-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.price-category h3 {
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.price-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.service {
+    font-weight: 500;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* Hours Section */
+.hours {
+    padding: 60px 0;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.hours-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.appointment-note {
+    font-size: 20px;
+    margin: 20px 0;
+    color: var(--accent-color);
+}
+
+.location-note {
+    font-style: italic;
+    margin-top: 15px;
+    color: var(--dark-color);
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    transition: var(--transition);
+}
+
+.contact-item:hover i {
+    background-color: var(--accent-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.contact-note {
+    text-align: center;
+    font-size: 18px;
+    color: var(--accent-color);
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    padding: 30px 0;
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+}
+
+.logo-small {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .price-list {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-note {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+} 
